@@ -1,0 +1,58 @@
+name: Publish approved prototype exports
+on:
+  push:
+    branches: [main]
+    paths: ['public/**', '.github/workflows/pages.yml']
+  pull_request:
+    paths: ['public/**', '.github/workflows/pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check public artifact boundary
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          import re
+          root = Path('public')
+          allowed = {'.html', '.css', '.js', '.txt', '.json', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.avif', '.ico', '.woff', '.woff2', '.zip'}
+          assert (root / 'index.html').is_file(), 'Missing review gallery'
+          assert json.loads((root / 'catalog.json').read_text())['schema_version'] == 1
+          secret = re.compile(r'BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY|gh[pousr]_[A-Za-z0-9]{30,}|sk_live_[A-Za-z0-9]{15,}|AKIA[0-9A-Z]{16}')
+          for p in root.rglob('*'):
+              assert not p.is_symlink(), 'Symlink in public output'
+              if not p.is_file():
+                  continue
+              assert p.name == '.nojekyll' or (p.suffix.lower() in allowed and not any(part.startswith('.') for part in p.relative_to(root).parts)), 'Unexpected file type/path in public output'
+              assert p.stat().st_size < 50 * 1024 * 1024, 'Optimize this public asset before publishing'
+              if p.suffix.lower() in {'.html', '.css', '.js', '.txt', '.json', '.svg'}:
+                  assert not secret.search(p.read_text()), 'Possible secret in public output'
+          print('Public artifact boundary checks passed; editorial/rights approval remains the owner responsibility.')
+          PY
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+        id: deployment
