@@ -1,0 +1,6 @@
+@import "cchs-tokens.css";
+@font-face{font-family:Domine;src:url("Domine-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Domine;src:url("Domine-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Montserrat;src:url("Montserrat-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Montserrat;src:url("Montserrat-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--ink:var(--cchs-color-graphite);--warm:var(--cchs-color-limestone);--green:var(--cchs-color-spruce);--soft:var(--cchs-color-pistachio);--white:var(--cchs-color-white);--radius:8px;--cchs-accent:var(--cchs-color-matcha);--cchs-accent-tint:var(--soft);--cchs-accent-shade:var(--green)}

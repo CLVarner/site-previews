@@ -10,6 +10,11 @@
       "site": "mttaborpreservation",
       "label": "Mt. Tabor Preservation Project",
       "round": "round-03"
+    },
+    {
+      "site": "twomilehouse.com",
+      "label": "Two Mile House",
+      "round": "round-01"
     }
   ]
 }
