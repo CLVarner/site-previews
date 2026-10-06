@@ -2,13 +2,13 @@
   "schema_version": 1,
   "rounds": [
     {
-      "site": "mttaborpreservation",
-      "label": "Mt. Tabor Preservation Project",
-      "round": "round-01"
-    },
-    {
       "site": "capitalcampaign",
       "label": "CCHS Capital Campaign",
+      "round": "round-03"
+    },
+    {
+      "site": "mttaborpreservation",
+      "label": "Mt. Tabor Preservation Project",
       "round": "round-03"
     }
   ]

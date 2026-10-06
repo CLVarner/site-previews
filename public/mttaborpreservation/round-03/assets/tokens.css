@@ -1,0 +1,66 @@
+/* Mount Tabor 0.3.0 — canonical prototype tokens; map to theme.json when separately authorized. */
+:root {
+ /* primitives */
+ --mt-forest:#173d35; --mt-forest-deep:#0f2c25; --mt-parchment:#f4efe5; --mt-timber:#292621;
+ --mt-sage:#d5dfd4; --mt-copper:#b47947; --mt-clay:#8a4f2d; --mt-clay-deep:#6d3b20; --mt-white:#fff;
+ --mt-muted:#526056; --mt-border:#bec8ba; --mt-control-border:#687b6a; --mt-error:#9c302a;
+
+ /* semantic */
+ --mt-surface:var(--mt-parchment); --mt-text:var(--mt-timber); --mt-heading:var(--mt-forest);
+ --mt-action:var(--mt-forest); --mt-action-hover:var(--mt-forest-deep); --mt-on-action:var(--mt-white);
+ --mt-surface-dark:var(--mt-forest); --mt-on-dark:var(--mt-parchment); --mt-surface-soft:var(--mt-sage);
+ --mt-surface-raised:var(--mt-white); --mt-label:var(--mt-clay); --mt-focus:var(--mt-forest);
+
+ /* 0.3.0 — grounds are never a flat fill; each has a tint it washes toward */
+ --mt-surface-tint:#ece4d5; --mt-surface-soft-tint:#cfdbce; --mt-surface-dark-tint:#0d251f;
+ --mt-wash-angle:180deg;
+
+ /* 0.3.0 — reclaimed board courses, carried as a mask so the colour comes from here */
+ --mt-board-ink:var(--mt-forest); --mt-board-strength:.055; --mt-board-scale:420px;
+ /* flat beside the CSS, which is how a prototype round ships; the showcase overrides it */
+ --mt-board-mask:url('pattern-boards.svg');
+
+ /* 0.3.0 — photographic grounds */
+ --mt-scrim:#173d35d1;            /* 82% — the floor for AA over a white pixel */
+ --mt-scrim-soft:#173d3561;
+ --mt-photo-opacity-min:.72;
+ --mt-duotone-shadow:var(--mt-forest); --mt-duotone-light:var(--mt-parchment);
+
+ /* type */
+ --mt-font-heading:'Literata',Georgia,serif; --mt-font-body:'Source Sans 3',Arial,sans-serif;
+ --mt-type-small:.875rem; --mt-type-body:1.125rem; --mt-type-h3:clamp(1.5rem,2.6vw,2rem);
+ --mt-type-h2:clamp(2rem,4vw,3.25rem); --mt-type-h1:clamp(2.6rem,5.1vw,4.85rem);
+ --mt-leading-body:1.6; --mt-leading-heading:1.14; --mt-tracking-label:.13em;
+
+ /* space and measure */
+ --mt-space-1:.25rem; --mt-space-2:.5rem; --mt-space-3:.75rem; --mt-space-4:1rem;
+ --mt-space-5:1.5rem; --mt-space-6:2rem; --mt-space-7:3rem; --mt-space-8:4.5rem; --mt-space-9:6rem;
+ --mt-wide:78rem; --mt-content:48rem; --mt-reading:62ch; --mt-gutter:clamp(1.25rem,4vw,4rem);
+ --mt-section:clamp(4rem,7vw,7rem); --mt-blend:clamp(3rem,6vw,6rem);
+
+ /* shape and depth */
+ --mt-radius-hairline:2px; --mt-radius-control:7px; --mt-radius-panel:12px; --mt-radius-pill:999px;
+ --mt-border-width:1px;
+ --mt-shadow:0 16px 40px rgb(23 61 53 / .08);
+ --mt-shadow-soft:0 2px 8px rgb(23 61 53 / .06);
+ --mt-shadow-lift:0 20px 48px rgb(23 61 53 / .14);
+
+ /* motion */
+ --mt-duration:160ms; --mt-duration-slow:420ms; --mt-ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* On a forest ground the semantic tokens flip; components are never overridden. */
+.dark, .ground--dark {
+ --mt-surface:var(--mt-forest); --mt-surface-tint:var(--mt-surface-dark-tint);
+ --mt-surface-soft:var(--mt-forest-deep); --mt-surface-soft-tint:#0a1f1a;
+ --mt-text:var(--mt-parchment); --mt-heading:var(--mt-parchment);
+ --mt-action:var(--mt-parchment); --mt-action-hover:var(--mt-sage); --mt-on-action:var(--mt-forest);
+ --mt-border:#3f6058; --mt-control-border:var(--mt-sage); --mt-muted:var(--mt-sage);
+ --mt-error:#f0b3ae;
+ --mt-surface-raised:var(--mt-forest-deep); --mt-label:var(--mt-sage); --mt-focus:var(--mt-parchment);
+ --mt-board-ink:var(--mt-parchment); --mt-board-strength:.035;
+ --mt-scrim:#0f2c25d1; --mt-scrim-soft:#0f2c2561;
+ --mt-shadow:0 16px 40px rgb(0 0 0 / .28);
+ --mt-shadow-soft:0 2px 8px rgb(0 0 0 / .22);
+ --mt-shadow-lift:0 20px 48px rgb(0 0 0 / .4);
+}

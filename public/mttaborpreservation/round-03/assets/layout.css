@@ -1,0 +1,50 @@
+/* Round 03 compositions on Mount Tabor 0.3.0. Layout experiments only; tokens and components unchanged. */
+.plain-button{border:0;background:transparent;color:var(--mt-action);font-family:var(--mt-font-body);padding-inline:0;text-decoration:underline;text-underline-offset:.22em;min-height:44px;text-align:left;font-weight:600}
+
+/* --- openings: the hero, framed by the doorway proportion --- */
+.hero{padding-block:clamp(2.5rem,5vw,4.5rem) clamp(3rem,6vw,5.5rem)}
+.hero h1{margin-bottom:1.5rem}
+.hero .lead{max-width:32ch}
+.meta-line{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;border-bottom:1px solid var(--mt-border);padding-bottom:1rem;margin-bottom:clamp(2rem,4vw,3.25rem)}
+.meta-line .eyebrow{margin:0}
+.meta-index{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mt-muted)}
+.journal-line{display:flex;justify-content:space-between;gap:1rem;border-block:1px solid var(--mt-control-border);padding:.8rem 0;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:clamp(2rem,4vw,3rem)}
+
+/* --- the motifs, used as section marks --- */
+.section-mark{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+.section-mark img{width:30px;height:30px;flex:0 0 auto;opacity:.9}
+.section-mark .eyebrow{margin:0}
+.dark .section-mark img,.ground--dark .section-mark img,.ground--photo .section-mark img{filter:invert(1) brightness(1.75)}
+
+/* --- photographic bands --- */
+.band{border-radius:0;min-height:clamp(20rem,38vw,27rem);display:grid;align-items:end}
+.band .ground-body{padding:clamp(1.75rem,4vw,3rem) 0}
+.band-contained{max-width:60rem;margin-inline:auto;border-radius:var(--mt-radius-panel);overflow:hidden}
+.credit-line{font-size:.75rem;color:var(--mt-muted);margin-top:.75rem}
+.dark .credit-line,.ground--dark .credit-line{color:var(--mt-sage)}
+.full-bleed{padding-inline:0}
+.full-bleed>.credit-line{padding-inline:var(--mt-gutter);max-width:var(--mt-wide);margin-inline:auto}
+
+.measure{max-width:52ch}
+.milestones{margin-top:2rem}
+.milestones .milestone:first-child{border-top:0;padding-top:0}
+.support-action{max-width:34rem}
+.donation-note{font-size:.8125rem;margin:1rem 0 0;color:var(--mt-muted)}
+.visit-wide{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.card-lead{grid-column:span 2}
+.card-lead h3{font-size:1.65rem}
+.work-photo img{border-radius:var(--mt-radius-panel)}
+
+/* --- the doorway as a closing invitation --- */
+.invitation{max-width:46rem;margin-inline:auto;text-align:center}
+.invitation .mark{width:72px;height:72px;margin:0 auto 1.5rem;display:block}
+.invitation .measure{margin-inline:auto}
+
+@media(max-width:1100px){.card-lead{grid-column:span 1}}
+@media(max-width:700px){
+  .meta-line{flex-direction:column;gap:.35rem}
+  .meta-index,.journal-line span:last-child{display:none}
+  .visit-wide{grid-template-columns:1fr}
+  .band{min-height:17rem}
+  .section-mark img{width:24px;height:24px}
+}
