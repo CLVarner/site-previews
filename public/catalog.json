@@ -10,6 +10,11 @@
       "site": "mttaborpreservation",
       "label": "Mt. Tabor Preservation Project",
       "round": "round-01"
+    },
+    {
+      "site": "capitalcampaign",
+      "label": "CCHS Capital Campaign",
+      "round": "round-02"
     }
   ]
 }

@@ -1,0 +1,3 @@
+/* Photograph backgrounds apply only to the warm concept, avoiding duplicate embedded photos elsewhere. */
+.b-care:before{background:linear-gradient(90deg,rgba(95,39,0,.95),rgba(95,39,0,.87)),url("hall-murals.jpg") center/cover}
+.b-community:before{background:linear-gradient(90deg,rgba(95,39,0,.93),rgba(95,39,0,.87)),url("hall-gathering.jpg") center/cover}
