@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 302">
+  <title>CCHS diamonds forming one larger diamond</title>
+  <defs>
+    <symbol id="original-diamond" viewBox="0 0 360 360">
+      <rect x="166.3967806" y="18.2413882" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="166.3967806" y="315.3443394" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="140.5972722" y="55.3792571" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="192.1962891" y="55.3792571" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="140.5972722" y="278.2064705" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="192.1962891" y="278.2064705" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="114.7977637" y="92.517126" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="166.3967806" y="92.517126" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="217.9957975" y="92.517126" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="114.7977637" y="241.0686016" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="166.3967806" y="241.0686016" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="217.9957975" y="241.0686016" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="88.9982553" y="129.6549949" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="140.5972722" y="129.6549949" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="192.1962891" y="129.6549949" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="243.795306" y="129.6549949" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="88.9982553" y="203.9307327" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="140.5972722" y="203.9307327" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="192.1962891" y="203.9307327" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="243.795306" y="203.9307327" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="63.1987468" y="166.7928638" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="114.7977637" y="166.7928638" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="166.3967806" y="166.7928638" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="217.9957975" y="166.7928638" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+      <rect x="269.5948144" y="166.7928638" width="28.3794593" height="20.5491698" rx="2.5676595" ry="2.5676595" />
+    </symbol>
+  </defs>
+  <use href="#original-diamond" x="88.0" y="0" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="66.0" y="32" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="110.0" y="32" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="44.0" y="64" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="88.0" y="64" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="132.0" y="64" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="22.0" y="96" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="66.0" y="96" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="110.0" y="96" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="154.0" y="96" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="0.0" y="128" width="46" height="46" fill="#23405e" />
+  <use href="#original-diamond" x="44.0" y="128" width="46" height="46" fill="#23405e" />
+  <use href="#original-diamond" x="88.0" y="128" width="46" height="46" fill="#23405e" />
+  <use href="#original-diamond" x="132.0" y="128" width="46" height="46" fill="#23405e" />
+  <use href="#original-diamond" x="176.0" y="128" width="46" height="46" fill="#23405e" />
+  <use href="#original-diamond" x="22.0" y="160" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="66.0" y="160" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="110.0" y="160" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="154.0" y="160" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="44.0" y="192" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="88.0" y="192" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="132.0" y="192" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="66.0" y="224" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="110.0" y="224" width="46" height="46" fill="#3f8cbd" />
+  <use href="#original-diamond" x="88.0" y="256" width="46" height="46" fill="#3f8cbd" />
+</svg>

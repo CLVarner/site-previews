@@ -1,0 +1,90 @@
+/* Local review: Shared Whole decoration; existing sections and brand masters retained. */
+.campaign-diamond-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--cchs-color-white);
+}
+.campaign-diamond-section > .wrap {
+  position: relative;
+  z-index: 1;
+}
+.campaign-diamond-art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(90deg, transparent 45%, #0001 69%, #000 84%);
+}
+.campaign-diamond-art > img {
+  position: absolute;
+  top: min(50%, 18rem);
+  right: -2.6rem;
+  height: calc(100% + 1rem);
+  max-height: 34rem;
+  width: auto;
+  max-width: none;
+  opacity: .5;
+  transform: translateY(-50%);
+}
+
+/* Keep the established large opening footprint, but reveal the composed diamond. */
+.ext-page-opening > .ext-opening-motif {
+  width: 650px;
+  height: 650px;
+  object-fit: contain;
+  right: -130px;
+  top: -65px;
+  opacity: .4;
+  mask-image: linear-gradient(90deg, transparent, #0004 32%, #000 58%);
+}
+
+/* Substitute the artwork in existing background layers without covering photographs. */
+.lib-motif::before,
+.gift-feature::after,
+.a-landmark::after,
+.c-vision::before,
+.b-giving::before {
+  background-image: url("shared-whole.svg");
+  opacity: .22;
+  filter: none;
+}
+.lib-diamond { opacity: .25; }
+.campaign-site .project-icon-tile > img { opacity: .3; filter: none; }
+.campaign-site .concept-poster-story::before {
+  background-image: url("shared-whole.svg");
+  opacity: .2;
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .ext-page-opening > .ext-opening-motif {
+    right: -230px;
+    opacity: .3;
+    mask-image: linear-gradient(90deg, transparent 25%, #0001 60%, #000 85%);
+  }
+}
+
+@media (max-width: 600px) {
+  .ext-page-opening > .ext-opening-motif {
+    width: 350px;
+    height: 350px;
+    right: -115px;
+    top: -70px;
+    opacity: .25;
+    mask-image: linear-gradient(90deg, transparent, #0005 50%, #000 80%),
+      linear-gradient(180deg, #000 0 11rem, transparent 19rem);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
+  .campaign-diamond-art {
+    mask-image: linear-gradient(90deg, transparent 30%, #0003 65%, #000 100%),
+      linear-gradient(180deg, #000 0 9rem, transparent 12rem);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
+  .campaign-diamond-art > img {
+    top: -1.5rem;
+    right: -3.3rem;
+    height: 16.5rem;
+    transform: none;
+  }
+}
