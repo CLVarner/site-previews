@@ -127,6 +127,16 @@ body.campaign-site{background:var(--cchs-color-white);overflow-wrap:break-word}
 .campaign-site .closing-section h2{margin:0 auto 1.5rem}
 .campaign-site .closing-section p{max-width:55ch}
 .campaign-site .closing-section .actions{margin-top:2rem}
+/* Keep the composed diamond at the edge, with a quiet field behind the CTA copy. */
+.campaign-site .closing-section.lib-motif{overflow:hidden}
+.campaign-site .closing-section.lib-motif::before{
+ background-size:650px;
+ background-position:right -180px center;
+ background-repeat:no-repeat;
+ opacity:.16;
+ mask-image:linear-gradient(90deg,transparent 48%,#0001 72%,#000 100%);
+ pointer-events:none;
+}
 .campaign-site .quiet-follow{padding-block:2rem}
 .campaign-site .quiet-follow p{font-size:.83rem}
 .campaign-site .method-reading>.text-link{display:inline-flex;align-items:center;min-height:44px;margin-block:.8rem}
@@ -160,6 +170,14 @@ body.campaign-site{background:var(--cchs-color-white);overflow-wrap:break-word}
  .campaign-site .inquiry-layout{gap:2.5rem}
 }
 @media(max-width:800px){
+ /* The raised giving card must not cover the photograph's caption or credit. */
+ .campaign-site .local-giving .a-gift-photo{position:relative}
+ .campaign-site .local-giving .a-gift-photo figcaption{
+  position:absolute;top:.75rem;left:.75rem;right:.75rem;
+  width:fit-content;max-width:calc(100% - 1.5rem);
+  padding:.35rem .6rem;border-radius:4px;
+  background:rgba(64,60,57,.93);color:white;font-size:.65rem;line-height:1.7;
+ }
  .campaign-site .a-hero:before{background:linear-gradient(90deg,rgba(35,64,94,.98),rgba(35,64,94,.82))}
  .campaign-site .preview-ribbon{font-size:.62rem}
  .campaign-site .campaign-label{display:none}
