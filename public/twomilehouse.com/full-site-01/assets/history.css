@@ -1,0 +1,23 @@
+/* TMH-S04: an ordered history, using the venue's existing type and color tokens. */
+.house-history-timeline .history-heading{max-width:760px;margin-bottom:40px}
+.house-history-timeline .history-heading p:not(.eyebrow){max-width:620px}
+.house-history-timeline .history-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px}
+.house-history-timeline .history-list>li{position:relative;border-top:1px solid var(--spruce);padding:28px 0 0;min-width:0}
+.house-history-timeline .history-list>li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--spruce)}
+.house-history-timeline .history-date{font:400 25px/1.3 Domine,Georgia,serif;color:var(--spruce);margin-bottom:20px;white-space:nowrap}
+.house-history-timeline .history-list h3{font-size:21px;line-height:1.3;margin-bottom:12px}
+.house-history-timeline .history-list p:not(.history-date){font-size:14px;line-height:1.7;margin:0}
+.house-history-timeline .history-footnote{font-size:12px;margin-top:32px;max-width:750px}
+@media(min-width:1280px){.house-history-timeline .history-list{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:700px){
+ .house-history-timeline .history-heading{margin-bottom:32px}
+ .house-history-timeline .history-heading h2{font-size:32px}
+ .house-history-timeline .history-heading h2 br{display:none}
+ .house-history-timeline .history-list{display:block}
+ .house-history-timeline .history-list>li{border-top:0;border-left:1px solid var(--spruce);padding:0 0 32px 28px}
+ .house-history-timeline .history-list>li:last-child{padding-bottom:0;border-left-color:transparent}
+ .house-history-timeline .history-list>li::before{left:-5px;top:9px}
+ .house-history-timeline .history-date{margin-bottom:10px}
+ .house-history-timeline .history-list h3{font-size:23px;margin-bottom:10px}
+ .house-history-timeline .history-list p:not(.history-date){font-size:15px}
+}
