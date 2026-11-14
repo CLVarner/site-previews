@@ -5,8 +5,8 @@ const filmMount = document.getElementById('concept-video-mount');
 const filmStatus = document.getElementById('concept-video-status');
 filmPoster?.addEventListener('click', () => {
   const player = document.createElement('iframe');
-  player.src = 'https://www.youtube-nocookie.com/embed/uDspROyTuZs?rel=0&playsinline=1&autoplay=1';
-  player.title = 'Cumberland County Historical Society — architectural concept by McKissick Associates';
+  player.src = 'https://www.youtube-nocookie.com/embed/97I34e6b3k0?rel=0&playsinline=1&autoplay=1';
+  player.title = 'Cumberland County Historical Society — proposed addition and Odd Fellows Hall concept by McKissick Associates';
   player.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
   player.allowFullscreen = true;
   player.referrerPolicy = 'strict-origin-when-cross-origin';
