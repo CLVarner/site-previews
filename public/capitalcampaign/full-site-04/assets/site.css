@@ -309,3 +309,48 @@ body.campaign-site{background:var(--cchs-color-white);overflow-wrap:break-word}
  .campaign-site .people-hero .hero-backdrop{height:320px}
  .campaign-site .people-hero .hero-backdrop:after{background:linear-gradient(180deg,rgba(35,64,94,.03) 0px,rgba(35,64,94,.08) 160px,rgba(35,64,94,.78) 255px,#23405e 320px)}
 }
+
+/* Dedicated proposed-addition gallery; the accepted people-led hero is unchanged. */
+.campaign-site .project-concept{display:block;margin:0;min-width:0}
+.campaign-site .project-concept>img{display:block;position:static;width:100%;height:auto;max-width:100%;object-fit:contain;transform:none;border:1px solid var(--cchs-color-limestone)}
+.campaign-site .project-concept>figcaption{position:static;display:flex;justify-content:space-between;align-items:baseline;gap:.65rem 1.25rem;flex-wrap:wrap;padding:.8rem 0 0;background:transparent;color:var(--cchs-color-graphite);font-size:.68rem;line-height:1.75}
+.campaign-site .project-concept figcaption a{display:inline-flex;align-items:center;min-height:44px;color:var(--cchs-color-prussian);font-weight:700;text-underline-offset:.2rem}
+.campaign-site .project-rendering .wrap{max-width:1120px}
+.campaign-site .project-concept-link{margin-top:1.4rem}
+.campaign-site .rendering-story .project-concept{align-self:center}
+.campaign-site .proposed-renderings{padding-block:clamp(3rem,5.5vw,5rem);background:var(--cchs-color-white)}
+.campaign-site .renderings-heading{max-width:54rem;margin-bottom:2.5rem}
+.campaign-site .renderings-heading h2{font-size:clamp(2.2rem,3.8vw,3.5rem);line-height:1.18;max-width:23ch;margin:.9rem 0 1.25rem}
+.campaign-site .renderings-heading>p:last-child{font-size:.96rem;line-height:1.85;max-width:70ch}
+.campaign-site .proposed-renderings .rendering-view{display:block;margin:0;min-width:0}
+.campaign-site .proposed-renderings .rendering-view>img{display:block;position:static;width:100%;height:auto;max-width:100%;object-fit:contain;transform:none;border:1px solid var(--cchs-color-limestone)}
+.campaign-site .proposed-renderings .rendering-view>figcaption{position:static;display:flex;justify-content:space-between;align-items:baseline;gap:.7rem 1.5rem;flex-wrap:wrap;padding:.8rem 0 0;background:transparent;color:var(--cchs-color-graphite);font-size:.68rem;line-height:1.75}
+.campaign-site .rendering-view figcaption a{color:var(--cchs-color-prussian);font-weight:700;text-underline-offset:.2rem;min-height:24px}
+.campaign-site .renderings-interiors{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.4rem}
+.campaign-site .renderings-action{margin-top:2.2rem}
+@media(max-width:650px){
+ .campaign-site .renderings-heading{margin-bottom:1.8rem}
+ .campaign-site .renderings-interiors{grid-template-columns:1fr;gap:2rem;margin-top:2rem}
+ .campaign-site .rendering-view figcaption a{display:inline-flex;align-items:center;min-height:32px}
+}
+
+/* The film and renderings share one section, heading and proposal context. */
+.campaign-site .renderings-film-and-interiors{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:2.5rem;margin-top:3.25rem;align-items:start}
+.campaign-site .renderings-film,.campaign-site .renderings-film-and-interiors>.renderings-interiors{min-width:0}
+.campaign-site .renderings-film-and-interiors>.renderings-interiors{display:grid;grid-template-columns:1fr;gap:1.8rem;margin:0}
+.campaign-site .renderings-film-and-interiors h3{font-family:var(--cchs-font-display);font-weight:400;font-size:clamp(1.4rem,2vw,1.85rem);line-height:1.35;margin:0 0 1.5rem}
+.campaign-site .renderings-film-and-interiors>.renderings-interiors>h3{margin:0}
+.campaign-site .renderings-film .ext-video{margin:0}
+.campaign-site .renderings-film .concept-poster-title{font-size:1.45rem}
+.campaign-site .renderings-film .concept-poster-story{padding:1.4rem;gap:1.5rem;align-items:start;flex-direction:column}
+.campaign-site .renderings-film .concept-video-description{font-size:.77rem}
+.campaign-site .renderings-film .ext-video>figcaption{font-size:.68rem;line-height:1.8}
+@media(max-width:900px){
+ .campaign-site .renderings-film-and-interiors{grid-template-columns:1fr;gap:2.75rem}
+ .campaign-site .renderings-film-and-interiors>.renderings-interiors{grid-template-columns:1fr 1fr;gap:1.5rem}
+ .campaign-site .renderings-film-and-interiors>.renderings-interiors>h3{grid-column:1/-1}
+}
+@media(max-width:650px){
+ .campaign-site .renderings-film-and-interiors{margin-top:2.5rem}
+ .campaign-site .renderings-film-and-interiors>.renderings-interiors{grid-template-columns:1fr;gap:1.8rem}
+}
